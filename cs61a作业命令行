@@ -1,0 +1,4 @@
+cd CS61A-Assignments
+cd hw/hw01
+Idle3 hw02.py
+python3 ok -q <function_name> --local
