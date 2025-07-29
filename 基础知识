@@ -1,0 +1,18 @@
+if之间是相互独立的，顺序执行，if else是互斥的，二选一
+变量在函数内部值会改变，并且这种改变会影响后续的条件判断。
+>>> def bake(cake, make):
+...     if cake == 0:
+...         cake = cake + 1
+...         print(cake)
+...     if cake == 1:
+...         print(make)
+...     else:
+...         return cake
+...     return make
+
+>>> bake(0, 29)
+输出：
+
+1
+29
+29
