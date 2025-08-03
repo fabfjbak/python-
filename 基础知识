@@ -41,3 +41,47 @@ def product(n, term):
     for i in range(1,n+1):
         k=term(i)*k
     return k
+
+变量传递函数（square = make_power_of(2)这一步相当于把n等于2记住的内部函数传递给了外面，更适合封装）
+def make_power_of(n):
+    # 外部函数参数 n 被内部函数捕获
+    def power(x):
+        return x ** n
+    return power
+
+# 创建一个可以计算平方的函数
+square = make_power_of(2)
+print(square(5)) # 输出: 25
+
+# 创建一个可以计算立方的函数
+cube = make_power_of(3)
+print(cube(5)) # 输出: 125
+
+
+return函数名不带（）就是函数本身逻辑，如果带了（）就是调用，要出值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
