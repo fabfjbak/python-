@@ -1,0 +1,41 @@
+字典
+
+字典包含键-值对（key-value pairs），并允许使用方括号通过键来查找值。每个键都必须是唯一的。
+
+>>> d = {2: 4, 'two': ['four'], (1, 1): 4}
+>>> d[2]
+4
+>>> d['two']
+['four']
+>>> d[(1, 1)]
+4
+你可以使用 .keys()、.values() 或 .items() 来访问键、值或键-值对的序列。
+
+>>> for k in d.keys():
+...     print(k)
+...
+2
+two
+(1, 1)
+>>> for v in d.values():
+...     print(v)
+...
+4
+['four']
+4
+>>> for k, v in d.items():
+...     print(k, v)
+...
+2 4
+two ['four']
+(1, 1) 4
+你可以使用 in 来检查字典是否包含某个键：
+
+>>> 'two' in d
+True
+>>> 4 in d
+False
+字典推导式是一种表达式，它会生成一个新的字典。
+
+>>> {3*x: 3*x + 1 for x in range(2, 5)}
+{6: 7, 9: 10, 12: 13}
